@@ -6,12 +6,20 @@
   flex-direction: column;
   margin: 0 auto;
   padding: 10px;
+  justify-content: space-between;
+}
+
+.client-message, .server-message {
+  display: inline-block;
+  max-width: 70%;
 }
 
 .chat-window {
-  flex-grow: 1;
-  overflow-y: auto;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1; /* Allows the chat window to take up available space */
+  overflow-y: auto; /* Enables scrolling if content overflows */
 }
 
 .message {
@@ -27,7 +35,7 @@
   color: white;
   background-color: #ee8b2e;  /* Light green background for user messages */
   align-self: flex-end;       /* Align to the right */
-  text-align: right;          /* Text is right-aligned */
+  text-align: left;          /* Text is right-aligned */
   border-top-right-radius: 0; /* Sharp top-right corner */
 }
 
@@ -38,6 +46,17 @@
   align-self: flex-start;     /* Align to the left */
   text-align: left;           /* Text is left-aligned */
   border-top-left-radius: 0;  /* Sharp top-left corner */
+  margin: 0;
+  padding: 10px; 
+}
+
+.server-message p {
+  margin: 0;                  /* Remove margin from paragraphs */
+}
+
+.loading {
+  background-color: #ccc; /* Different background color for loading message */
+  color: #333;            /* Darker text color for loading message */
 }
 
 .input-area {
