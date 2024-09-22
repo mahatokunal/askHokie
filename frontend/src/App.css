@@ -1,16 +1,20 @@
 .App {
   text-align: center;
+  background-color: #ffffff;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 80vmin;
   pointer-events: none;
+  position: relative;
+  z-index: 1; /* Ensure it stays above other elements */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App-logo-1 {
+  height: 20vmin;
+  pointer-events: none;
+  position: relative;
+  z-index: 1; /* Ensure it stays above other elements */
 }
 
 .App-header {
@@ -36,3 +40,72 @@
     transform: rotate(360deg);
   }
 }
+
+/* App.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.hello {
+  position: absolute;
+  top: 10px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 50px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.logout-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+}
+
+.home_path{
+  margin-top: 20px;
+}
+
+.logout-button {
+  background-color: #9B3152;
+  color: #ffffff;
+}
+
+.signup-button {
+  background-color: #ee8b2e;
+  color: #ffffff;
+}
+
+.login-button {
+  background-color: #9B3152;
+  color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.button-container {
+  display: flex;
+  gap: 10px; /* Adjust the spacing between buttons as needed */
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.top-right-image {
+  position: absolute;
+  top: -10px;
+  right: -80px;
+  height: auto;
+  width: auto;
+  z-index: 2; /* Ensure it stays above other elements */
+}
+

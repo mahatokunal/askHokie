@@ -74,7 +74,7 @@ const ChatWindow = () => {
 ))}
 {loading && (
         <div className="message server-message loading">
-          <span>Loading...</span>
+          <span>Thinking...</span>
         </div>
       )}
 </div>
